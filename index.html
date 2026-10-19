@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090707">
+  <title>CineScope | Movie Obsession</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#home">CINE<span>SCOPE</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#movies">Explore</a>
+      <a href="#watchlist">Watchlist <span id="watch-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">WELCOME TO YOUR CINEMA UNIVERSE</p>
+        <h1>Pure Movie<br><span>Obsession.</span></h1>
+        <p>From Telugu blockbusters to unforgettable love stories,
+          discover your next favorite movie.</p>
+        <a href="#movies" class="primary-btn">Explore Movies ↓</a>
+      </div>
+    </section>
+
+    <section class="movie-section" id="movies">
+      <p class="eyebrow">FIND YOUR NEXT FAVORITE</p>
+      <h2>Discover Movies</h2>
+
+      <label class="search-bar">
+        <span>⌕</span>
+        <input id="search" type="search"
+          placeholder="Search title, language or genre..."
+          aria-label="Search movies">
+      </label>
+
+      <div class="filters" id="filters">
+        <button class="filter active" data-filter="All">All Movies</button>
+        <button class="filter" data-filter="Telugu">Telugu</button>
+        <button class="filter" data-filter="Romance">Love Stories</button>
+        <button class="filter" data-filter="Action">Action</button>
+        <button class="filter" data-filter="Sci-Fi">Sci-Fi</button>
+        <button class="filter" data-filter="Drama">Drama</button>
+        <button class="filter" data-filter="Adventure">Adventure</button>
+        <button class="filter" data-filter="Animation">Animation</button>
+      </div>
+
+      <p id="result-count" class="muted" aria-live="polite"></p>
+      <div id="movie-grid" class="movie-grid"></div>
+      <p id="empty-state" class="empty-state" hidden>
+        No movies found. Try a different title or filter.
+      </p>
+    </section>
+
+    <section class="movie-section watchlist-section" id="watchlist">
+      <p class="eyebrow">YOUR PERSONAL COLLECTION</p>
+      <h2>My Watchlist ❤️</h2>
+      <div id="watch-grid" class="movie-grid"></div>
+      <p id="watch-empty" class="muted">
+        Your watchlist is empty. Add a movie to get started!
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#home">CINE<span>SCOPE</span></a>
+    <p>One life. Infinite stories. Pure movie obsession.</p>
+  </footer>
+</body>
+</html>
